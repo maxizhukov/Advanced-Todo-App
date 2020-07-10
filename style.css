@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none !important;
+}
+
+body {
+    background-image: linear-gradient(100deg, #e3e3e3, #9e9e9e);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    background: white;
+}
+
+form button {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    color: rgb(118, 161, 0);
+}
+
+.fa-plus-square:active {
+    transform: scale(1.2);
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hint-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hint {
+    max-width: 20vw;
+    background: red;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-button, .complete-button {
+    background: #2a2a2a;
+    color: white;
+    border: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.trash-button:hover, .complete-button:hover {
+    opacity: 0.8;
+}
+
+.trash-button {
+    border-left: 1px solid white;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.todo-item {
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #474646;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+    border: none;
+}
+
+.select::after {
+    color: white;
+    content: '\25BC';
+    position: absolute;
+    background: #44403e;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    background: white;
+    color: black;
+}
+
+
+
+
