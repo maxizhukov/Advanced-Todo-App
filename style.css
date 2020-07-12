@@ -13,9 +13,59 @@ body {
 
 header {
     font-size: 1.5rem;
+    display: block;
+    text-align: center;
 }
 
-header,
+.sound {
+    margin-right: 15px;
+    color: #05b105;
+    font-size: 2rem;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nosound {
+    margin-right: 15px;
+    color: #af1313;
+    font-size: 2rem;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 600px;
+    height: 30px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    border-radius: 20px;
+}
+
+progress[value]::-webkit-progress-value {
+    background:
+            -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+            -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+            -webkit-linear-gradient(left, #665d57, #939190);
+
+    border-radius: 20px;
+    background-size: 60px 30px, 100% 100%, 100% 100%;
+    transition: all 1.2s ease;
+
+}
+
+
 form {
     min-height: 10vh;
     display: flex;
@@ -31,7 +81,7 @@ form input {
     background: white;
 }
 
-form button {
+.todo-button {
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-size: 2rem;
     border: none;
@@ -41,13 +91,28 @@ form button {
     transition: all 0.3s ease;
 }
 
-form button:hover {
+.todo-button:hover {
     color: rgb(118, 161, 0);
+}
+
+
+.reset-button {
+    height: 48px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-size: 1.5rem;
+    border: none;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    background: rgba(255, 52, 52, 0.64);
 }
 
 .fa-plus-square:active {
     transform: scale(1.2);
 }
+
+
 
 .todo-container {
     display: flex;
@@ -164,6 +229,11 @@ select {
     color: black;
 }
 
+
+.stat-all {
+    font-size: 24px;
+    text-align: center;
+}
 
 
 
