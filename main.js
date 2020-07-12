@@ -10,6 +10,7 @@ const blockedAudio = document.getElementById('blocked')
 const progress = document.getElementById('progress')
 const reset = document.querySelector('.reset-button')
 const soundButton = document.querySelector('.sound')
+const soundGood = document.getElementById('good')
 
 
 soundButton.addEventListener('click', soundToggle)
@@ -100,7 +101,6 @@ function deleteCheck(e) {
             playSuccess()
         }
         const todo = item.parentElement
-        console.log(todo)
         todo.classList.toggle('completed')
         test()
         styles()
@@ -240,8 +240,15 @@ function test() {
             }
         res = count / col
         progress.value = res*100
+    if (res === 1) {
+        alert('You are the Best!But...Sorry')
+        playGood()
+    }
 }
 
+function playGood() {
+    soundGood.play()
+}
 
 
 
